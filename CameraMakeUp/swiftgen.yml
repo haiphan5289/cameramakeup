@@ -1,0 +1,11 @@
+xcassets:
+  inputs: Audio/Assets.xcassets
+  outputs:
+    templateName: swift4
+    output: Audio/Generated/Assets-Gen.swift
+strings:
+  inputs: Audio/Localizable.strings
+  outputs:
+    templateName: structured-swift4
+    output: Audio/Generated/Strings-Gen.swift
+

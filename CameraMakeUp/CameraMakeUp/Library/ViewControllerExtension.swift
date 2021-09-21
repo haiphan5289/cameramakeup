@@ -41,6 +41,11 @@ extension UIViewController {
         view.addSubview(statusBarView)
     }
     
+    static func createVCfromStoryBoard() -> Self {
+        let vc = UIStoryboard(name: "\(self)", bundle: nil).instantiateViewController(withIdentifier:  "\(self)") as! Self
+        return vc
+    }
+    
     static func createVC() -> Self {
         let vc = Self.init(nibName: "\(self)", bundle: nil)
         return vc

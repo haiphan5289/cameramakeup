@@ -9,11 +9,12 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import SnapKit
 
 enum TypeTabbar: Int, CaseIterable {
     case home
     case audio
-    case video
+//    case video
     
 //    var image: UIImage? {
 //        switch self {
@@ -40,6 +41,8 @@ enum TypeTabbar: Int, CaseIterable {
 }
 
 class BaseTabbarViewController: UITabBarController {
+    
+    var customTabbar: CustomTabbar!
     
     private let disposeBag = DisposeBag()
     override func viewDidLoad() {
@@ -96,10 +99,14 @@ class BaseTabbarViewController: UITabBarController {
     }
     
     func setupUI() {
-        self.tabBar.isTranslucent = false
+//        self.tabBar.isTranslucent = false
 //        UITabBar.appearance().tintColor = Asset.color1.color
         UITabBar.appearance().barTintColor = TABBAR_COLOR
 //        self.view.backgroundColor = Asset.colorApp.color
+        let frame = self.tabBar.frame
+        self.tabBar.isHidden = true
+        self.customTabbar = CustomTabbar(frame: frame)
+        self.view.addSubview(self.customTabbar)
     }
     
     func setupTabbar() {

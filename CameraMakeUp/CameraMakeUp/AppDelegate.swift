@@ -11,10 +11,22 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.gotoHome()
+        UIFont.overrideInitialize()
+                
         return true
+    }
+    
+    private func gotoHome() {
+        window = UIWindow.init(frame: UIScreen.main.bounds)
+        let vc = BaseTabbarViewController()
+        let navi: UINavigationController = UINavigationController(rootViewController: vc)
+        window?.rootViewController = navi
+        window?.makeKeyAndVisible()
     }
 
     // MARK: UISceneSession Lifecycle

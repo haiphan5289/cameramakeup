@@ -132,6 +132,7 @@
 		93B997F926FA24D100082181 /* GoogleSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93B997E826FA24D100082181 /* GoogleSans-Medium.otf */; };
 		93B997FA26FA24D100082181 /* GoogleSans-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93B997E926FA24D100082181 /* GoogleSans-MediumItalic.otf */; };
 		93B997FD26FA260900082181 /* SettingDefaultFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B997FC26FA260900082181 /* SettingDefaultFont.swift */; };
+		93B9980026FA28B300082181 /* CustomTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B997FF26FA28B300082181 /* CustomTabbar.swift */; };
 		9690731B9E0F97951489FFCF /* Pods_CameraMakeUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF56319144C9508A02EFB5E /* Pods_CameraMakeUp.framework */; };
 /* End PBXBuildFile section */
 
@@ -265,6 +266,7 @@
 		93B997E826FA24D100082181 /* GoogleSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GoogleSans-Medium.otf"; sourceTree = "<group>"; };
 		93B997E926FA24D100082181 /* GoogleSans-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GoogleSans-MediumItalic.otf"; sourceTree = "<group>"; };
 		93B997FC26FA260900082181 /* SettingDefaultFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingDefaultFont.swift; sourceTree = "<group>"; };
+		93B997FF26FA28B300082181 /* CustomTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbar.swift; sourceTree = "<group>"; };
 		BBB4C85745D043C675F0573C /* Pods-CameraMakeUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraMakeUp.release.xcconfig"; path = "Target Support Files/Pods-CameraMakeUp/Pods-CameraMakeUp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -307,10 +309,11 @@
 				93B997D726FA24D100082181 /* BaseCommonView */,
 				93B996D226FA1FD200082181 /* SwiftGen */,
 				93B9973326FA22F200082181 /* Library */,
+				93B997FB26FA25F300082181 /* Manage */,
 				93B996E426FA22DE00082181 /* Views */,
 				93B996DA26FA22D100082181 /* Common */,
 				93B996D326FA201F00082181 /* Localizable */,
-				93B997FB26FA25F300082181 /* Manage */,
+				93B9980126FA28DE00082181 /* Modules */,
 				93B996BB26FA1E4E00082181 /* AppDelegate.swift */,
 				93B996BD26FA1E4E00082181 /* SceneDelegate.swift */,
 				93B996BF26FA1E4E00082181 /* ViewController.swift */,
@@ -376,6 +379,7 @@
 		93B996E426FA22DE00082181 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				93B997FE26FA285A00082181 /* CustomTabbar */,
 				93B996E526FA22DE00082181 /* ShowValueSlider */,
 				93B996EA26FA22DE00082181 /* ABVideoRangeSlider */,
 				93B996F526FA22DF00082181 /* ImportOptions */,
@@ -639,6 +643,21 @@
 			path = Manage;
 			sourceTree = "<group>";
 		};
+		93B997FE26FA285A00082181 /* CustomTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				93B997FF26FA28B300082181 /* CustomTabbar.swift */,
+			);
+			path = CustomTabbar;
+			sourceTree = "<group>";
+		};
+		93B9980126FA28DE00082181 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		9C515FA3A282D71A6C7B3AB1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -839,6 +858,7 @@
 				93B997B626FA233C00082181 /* UIScrollViewExtensions.swift in Sources */,
 				93B9972726FA22DF00082181 /* ABTimeView.swift in Sources */,
 				93B997EE26FA24D100082181 /* Message.swift in Sources */,
+				93B9980026FA28B300082181 /* CustomTabbar.swift in Sources */,
 				93B9975526FA22F300082181 /* Obserable+Extension.swift in Sources */,
 				93B9976F26FA22F300082181 /* Encode+Extension.swift in Sources */,
 				93B9977126FA22F300082181 /* ProductViewModel.swift in Sources */,

@@ -123,16 +123,6 @@ PODS:
     - GoogleUtilities/Environment (~> 7.2)
     - nanopb (~> 2.30908.0)
     - PromisesObjC (~> 1.2)
-  - GoogleMaps (3.1.0):
-    - GoogleMaps/Maps (= 3.1.0)
-  - GoogleMaps/Base (3.1.0)
-  - GoogleMaps/Maps (3.1.0):
-    - GoogleMaps/Base
-  - GooglePlacePicker (3.1.0):
-    - GoogleMaps (= 3.1.0)
-    - GooglePlaces (= 3.1.0)
-  - GooglePlaces (3.1.0):
-    - GoogleMaps/Base (= 3.1.0)
   - GoogleUtilities/AppDelegateSwizzler (7.4.3):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -220,8 +210,6 @@ DEPENDENCIES:
   - FDWaveformView
   - Firebase
   - FSPagerView
-  - GooglePlacePicker
-  - GooglePlaces
   - HGCircularSlider
   - HKVideoRangeSlider
   - IQKeyboardManagerSwift
@@ -277,9 +265,6 @@ SPEC REPOS:
     - FSPagerView
     - GoogleAppMeasurement
     - GoogleDataTransport
-    - GoogleMaps
-    - GooglePlacePicker
-    - GooglePlaces
     - GoogleUtilities
     - HGCircularSlider
     - HKVideoRangeSlider
@@ -341,9 +326,6 @@ SPEC CHECKSUMS:
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   GoogleAppMeasurement: b52eafc9dff542d580700e708216568bd2fbf168
   GoogleDataTransport: 04c3e9a480bbcaa2ec3f5d27f1cdeb6a92f20c8d
-  GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
-  GooglePlacePicker: fa975116ac202ac29822c0a79758ea1c4db5a95f
-  GooglePlaces: e874db179f2675c4f3eeda0b686b540273a578b0
   GoogleUtilities: 45dbb24a7f351d69d0a601482b39ad6c32e30dab
   HGCircularSlider: afb1942743a2df156dcc7a3500216e523e14266b
   HKVideoRangeSlider: b3ce874781a16f0c8d5e6b3b90bf59de02e1e7cf
@@ -378,6 +360,6 @@ SPEC CHECKSUMS:
   ViewAnimator: a9ceed80266e00fd435ec4fb99b2df64d580d0e4
   WMSegmentControl: 4bb3a61e28cd0a0fcfcf932bec1f5795835b9f3f
 
-PODFILE CHECKSUM: ad377bacea58f40600d64521a48c9e536d44c0f7
+PODFILE CHECKSUM: 1abd8d3c86b723af8b2e7c764e9110c55cb172ef
 
 COCOAPODS: 1.10.1

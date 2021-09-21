@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		93B996C326FA1E4E00082181 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93B996C126FA1E4E00082181 /* Main.storyboard */; };
 		93B996C526FA1E4F00082181 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93B996C426FA1E4F00082181 /* Assets.xcassets */; };
 		93B996C826FA1E4F00082181 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93B996C626FA1E4F00082181 /* LaunchScreen.storyboard */; };
+		93B996D026FA1F8800082181 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 93B996CF26FA1F8800082181 /* swiftgen.yml */; };
+		93B996D526FA206100082181 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93B996D426FA206100082181 /* Localizable.strings */; };
 		9690731B9E0F97951489FFCF /* Pods_CameraMakeUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF56319144C9508A02EFB5E /* Pods_CameraMakeUp.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		93B996C426FA1E4F00082181 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93B996C726FA1E4F00082181 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93B996C926FA1E4F00082181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93B996CF26FA1F8800082181 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		93B996D426FA206100082181 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		BBB4C85745D043C675F0573C /* Pods-CameraMakeUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraMakeUp.release.xcconfig"; path = "Target Support Files/Pods-CameraMakeUp/Pods-CameraMakeUp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,6 +49,7 @@
 		93B996AF26FA1E4E00082181 = {
 			isa = PBXGroup;
 			children = (
+				93B996CF26FA1F8800082181 /* swiftgen.yml */,
 				93B996BA26FA1E4E00082181 /* CameraMakeUp */,
 				93B996B926FA1E4E00082181 /* Products */,
 				9C515FA3A282D71A6C7B3AB1 /* Pods */,
@@ -63,6 +68,8 @@
 		93B996BA26FA1E4E00082181 /* CameraMakeUp */ = {
 			isa = PBXGroup;
 			children = (
+				93B996D326FA201F00082181 /* Localize */,
+				93B996D226FA1FD200082181 /* SwiftGen */,
 				93B996BB26FA1E4E00082181 /* AppDelegate.swift */,
 				93B996BD26FA1E4E00082181 /* SceneDelegate.swift */,
 				93B996BF26FA1E4E00082181 /* ViewController.swift */,
@@ -74,13 +81,27 @@
 			path = CameraMakeUp;
 			sourceTree = "<group>";
 		};
+		93B996D226FA1FD200082181 /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SwiftGen;
+			sourceTree = "<group>";
+		};
+		93B996D326FA201F00082181 /* Localize */ = {
+			isa = PBXGroup;
+			children = (
+				93B996D426FA206100082181 /* Localizable.strings */,
+			);
+			path = Localize;
+			sourceTree = "<group>";
+		};
 		9C515FA3A282D71A6C7B3AB1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				4385463B0316E37E052F591E /* Pods-CameraMakeUp.debug.xcconfig */,
 				BBB4C85745D043C675F0573C /* Pods-CameraMakeUp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -104,7 +125,6 @@
 				93B996B526FA1E4E00082181 /* Frameworks */,
 				93B996B626FA1E4E00082181 /* Resources */,
 				B70FA2A0F64386676FA93DF0 /* [CP] Embed Pods Frameworks */,
-				C4C2B7F6BD993A86A2C77F4E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +172,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93B996D526FA206100082181 /* Localizable.strings in Resources */,
 				93B996C826FA1E4F00082181 /* LaunchScreen.storyboard in Resources */,
 				93B996C526FA1E4F00082181 /* Assets.xcassets in Resources */,
 				93B996C326FA1E4E00082181 /* Main.storyboard in Resources */,
+				93B996D026FA1F8800082181 /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,23 +220,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CameraMakeUp/Pods-CameraMakeUp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C4C2B7F6BD993A86A2C77F4E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CameraMakeUp/Pods-CameraMakeUp-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CameraMakeUp/Pods-CameraMakeUp-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CameraMakeUp/Pods-CameraMakeUp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

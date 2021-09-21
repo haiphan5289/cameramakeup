@@ -1,11 +1,11 @@
 xcassets:
-  inputs: Audio/Assets.xcassets
+  inputs: CameraMakeUp/Assets.xcassets
   outputs:
     templateName: swift4
-    output: Audio/Generated/Assets-Gen.swift
+    output: CameraMakeUp/SwiftGen/Assets-Gen.swift
 strings:
-  inputs: Audio/Localizable.strings
+  inputs: CameraMakeUp/Localizable.strings
   outputs:
     templateName: structured-swift4
-    output: Audio/Generated/Strings-Gen.swift
+    output: CameraMakeUp/SwiftGen/Strings-Gen.swift
 

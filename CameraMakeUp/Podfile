@@ -19,8 +19,6 @@ target 'CameraMakeUp' do
   pod 'EasyTipView'
   pod 'ActionSheetPicker-3.0'
   pod 'IQKeyboardManagerSwift'
-  pod 'GooglePlaces'
-  pod 'GooglePlacePicker'
   pod 'Cosmos'
   pod 'MBProgressHUD'
 #  pod 'FirebaseCore', '~> 6.5.0'

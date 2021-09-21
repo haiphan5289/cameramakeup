@@ -15,6 +15,8 @@
 		93B996C826FA1E4F00082181 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93B996C626FA1E4F00082181 /* LaunchScreen.storyboard */; };
 		93B996D026FA1F8800082181 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 93B996CF26FA1F8800082181 /* swiftgen.yml */; };
 		93B996D526FA206100082181 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93B996D426FA206100082181 /* Localizable.strings */; };
+		93B996D826FA229D00082181 /* Assets-Gen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B996D626FA229D00082181 /* Assets-Gen.swift */; };
+		93B996D926FA229D00082181 /* Strings-Gen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B996D726FA229D00082181 /* Strings-Gen.swift */; };
 		9690731B9E0F97951489FFCF /* Pods_CameraMakeUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF56319144C9508A02EFB5E /* Pods_CameraMakeUp.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		93B996C926FA1E4F00082181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93B996CF26FA1F8800082181 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		93B996D426FA206100082181 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		93B996D626FA229D00082181 /* Assets-Gen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets-Gen.swift"; sourceTree = "<group>"; };
+		93B996D726FA229D00082181 /* Strings-Gen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings-Gen.swift"; sourceTree = "<group>"; };
 		BBB4C85745D043C675F0573C /* Pods-CameraMakeUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraMakeUp.release.xcconfig"; path = "Target Support Files/Pods-CameraMakeUp/Pods-CameraMakeUp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,7 +72,7 @@
 		93B996BA26FA1E4E00082181 /* CameraMakeUp */ = {
 			isa = PBXGroup;
 			children = (
-				93B996D326FA201F00082181 /* Localize */,
+				93B996D326FA201F00082181 /* Localizable */,
 				93B996D226FA1FD200082181 /* SwiftGen */,
 				93B996BB26FA1E4E00082181 /* AppDelegate.swift */,
 				93B996BD26FA1E4E00082181 /* SceneDelegate.swift */,
@@ -84,16 +88,18 @@
 		93B996D226FA1FD200082181 /* SwiftGen */ = {
 			isa = PBXGroup;
 			children = (
+				93B996D626FA229D00082181 /* Assets-Gen.swift */,
+				93B996D726FA229D00082181 /* Strings-Gen.swift */,
 			);
 			path = SwiftGen;
 			sourceTree = "<group>";
 		};
-		93B996D326FA201F00082181 /* Localize */ = {
+		93B996D326FA201F00082181 /* Localizable */ = {
 			isa = PBXGroup;
 			children = (
 				93B996D426FA206100082181 /* Localizable.strings */,
 			);
-			path = Localize;
+			path = Localizable;
 			sourceTree = "<group>";
 		};
 		9C515FA3A282D71A6C7B3AB1 /* Pods */ = {
@@ -230,7 +236,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				93B996C026FA1E4E00082181 /* ViewController.swift in Sources */,
+				93B996D826FA229D00082181 /* Assets-Gen.swift in Sources */,
 				93B996BC26FA1E4E00082181 /* AppDelegate.swift in Sources */,
+				93B996D926FA229D00082181 /* Strings-Gen.swift in Sources */,
 				93B996BE26FA1E4E00082181 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

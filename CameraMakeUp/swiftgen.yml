@@ -4,7 +4,7 @@ xcassets:
     templateName: swift4
     output: CameraMakeUp/SwiftGen/Assets-Gen.swift
 strings:
-  inputs: CameraMakeUp/Localizable.strings
+  inputs: CameraMakeUp/Localizable/Localizable.strings
   outputs:
     templateName: structured-swift4
     output: CameraMakeUp/SwiftGen/Strings-Gen.swift

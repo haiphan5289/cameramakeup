@@ -13,7 +13,7 @@ import SnapKit
 
 enum TypeTabbar: Int, CaseIterable {
     case home
-    case audio
+//    case audio
 //    case video
     
 //    var image: UIImage? {
@@ -27,16 +27,12 @@ enum TypeTabbar: Int, CaseIterable {
 //        }
 //    }
 //
-//    var text: String {
-//        switch self {
-//        case .home:
-//            return L10n.Tabbar.hometext
-//        case .audio:
-//            return L10n.Tabbar.audiotext
-//        case .video:
-//            return L10n.Tabbar.videotext
-//        }
-//    }
+    var text: String {
+        switch self {
+        case .home:
+            return L10n.Tabbar.home
+        }
+    }
     
 }
 
@@ -65,20 +61,20 @@ class BaseTabbarViewController: UITabBarController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-//        var bottomSafeArea: CGFloat = 5
-//
-//        if #available(iOS 11.0, *) {
-//            if view.safeAreaInsets.bottom > 0 {
-//                bottomSafeArea = 10
-//            }
-//
-//        }
-//
-//        let height: CGFloat = tabBar.frame.height + bottomSafeArea
-//        var tabFrame            = tabBar.frame
-//        tabFrame.size.height    = height
-//        tabFrame.origin.y       = view.frame.size.height - height
-//        tabBar.frame            = tabFrame
+        var bottomSafeArea: CGFloat = 5
+
+        if #available(iOS 11.0, *) {
+            if view.safeAreaInsets.bottom > 0 {
+                bottomSafeArea = 10
+            }
+
+        }
+
+        let height: CGFloat = tabBar.frame.height + bottomSafeArea
+        var tabFrame            = tabBar.frame
+        tabFrame.size.height    = height
+        tabFrame.origin.y       = view.frame.size.height - height
+        self.customTabbar.frame            = tabFrame
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
@@ -110,17 +106,14 @@ class BaseTabbarViewController: UITabBarController {
     }
     
     func setupTabbar() {
-//        let homeVC = HomeVC(nibName: "HomeVC", bundle: nil)
-//        let audioVC = LibraryVC.createVC()
-//        let videoVC = VideoVC.createVC()
-//        self.viewControllers = [homeVC, audioVC, videoVC]
-//        
-//        TypeTabbar.allCases.forEach { (type) in
-//            if let vc = self.viewControllers?[type.rawValue] {
-//                vc.tabBarItem.title = type.text
-//                vc.tabBarItem.image = type.image
-//            }
-//        }
+        let homeVC = HomeVC.createVC()
+        self.viewControllers = [homeVC]
+        
+        TypeTabbar.allCases.forEach { (type) in
+            if let vc = self.viewControllers?[type.rawValue] {
+                vc.tabBarItem.title = type.text
+            }
+        }
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {

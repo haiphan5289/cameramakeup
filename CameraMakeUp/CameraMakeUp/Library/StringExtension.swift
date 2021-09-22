@@ -64,16 +64,16 @@ extension String {
 //        let date = dateFormatter.date(from:self)
 //        return date
 //    }
-    func toCovertDate(format: String) -> Date? {
-        let dateFormatter = DateFormatter()
-//        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+//    func toCovertDate(format: String) -> Date? {
+//        let dateFormatter = DateFormatter()
+////        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+////        dateFormatter.dateFormat = format
 //        dateFormatter.dateFormat = format
-        dateFormatter.dateFormat = format
-            dateFormatter.timeZone = TimeZone.current
-            dateFormatter.locale = Locale.current
-        let date = dateFormatter.date(from:"2020-01-10")
-        return date
-    }
+//            dateFormatter.timeZone = TimeZone.current
+//            dateFormatter.locale = Locale.current
+//        let date = dateFormatter.date(from:"2020-01-10")
+//        return date
+//    }
 }
 extension UIImageView {
     func applyshadowWithCorner(containerView : UIView, cornerRadious : CGFloat){
@@ -88,4 +88,43 @@ extension UIImageView {
         self.layer.cornerRadius = cornerRadious
     }
 
+}
+
+extension String {
+    
+    enum FormatDate: String, CaseIterable {
+        case yyyyMMddHHmmss = "yyyy-MM-dd HH:mm:ss"
+        case HHmmssddMMyyyy = "HH:mm:ss dd/MM/yyyy"
+        case yyyyMMdd = "yyyy-MM-dd"
+        case HHmm = "HH:mm"
+        case MMddyyyy = "MM/dd/yyyy"
+        case ddMMyyyy = "dd/MM/yyyy"
+        case MMddyyyyHHmmss = "MM/dd/yyyy HH:mm:ss"
+    }
+    
+    func convertToDate() -> Date? {
+        var date: Date?
+        FormatDate.allCases.forEach { format in
+            if date != nil {
+                return
+            }
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale.current
+            dateFormatter.dateFormat = format.rawValue
+            date = dateFormatter.date(from: self)
+            
+        }
+        return date
+    }
+}
+
+extension Date {
+    private static let formatDateDefault = DateFormatter()
+    func covertToString(format: String.FormatDate) -> String {
+        Date.formatDateDefault.locale = .current
+        Date.formatDateDefault.dateFormat = format.rawValue
+        let result = Date.formatDateDefault.string(from: self)
+        return result
+    }
+    
 }

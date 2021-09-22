@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93A4D52226FB623A006D4390 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A4D52026FB623A006D4390 /* HomeVC.swift */; };
+		93A4D52326FB623A006D4390 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93A4D52126FB623A006D4390 /* HomeVC.xib */; };
+		93A4D52526FB650E006D4390 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A4D52426FB650E006D4390 /* Constant.swift */; };
+		93A4D52826FB6CB5006D4390 /* GetHeightSafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A4D52726FB6CB5006D4390 /* GetHeightSafeArea.swift */; };
 		93B996BC26FA1E4E00082181 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B996BB26FA1E4E00082181 /* AppDelegate.swift */; };
 		93B996BE26FA1E4E00082181 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B996BD26FA1E4E00082181 /* SceneDelegate.swift */; };
 		93B996C026FA1E4E00082181 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B996BF26FA1E4E00082181 /* ViewController.swift */; };
@@ -65,7 +69,6 @@
 		93B9976326FA22F300082181 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B9974326FA22F200082181 /* URL+Extension.swift */; };
 		93B9976426FA22F300082181 /* UITextField_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B9974426FA22F200082181 /* UITextField_Extension.swift */; };
 		93B9976526FA22F300082181 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B9974526FA22F200082181 /* String+Extension.swift */; };
-		93B9976626FA22F300082181 /* StringSwiftMenu+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B9974626FA22F200082181 /* StringSwiftMenu+Extension.swift */; };
 		93B9976726FA22F300082181 /* PropertyWapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B9974726FA22F200082181 /* PropertyWapper.swift */; };
 		93B9976826FA22F300082181 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B9974826FA22F200082181 /* ViewExtension.swift */; };
 		93B9976926FA22F300082181 /* UIAllertVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B9974926FA22F200082181 /* UIAllertVC+Extension.swift */; };
@@ -125,12 +128,6 @@
 		93B997F126FA24D100082181 /* BaseTabarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B997DF26FA24D100082181 /* BaseTabarViewController.swift */; };
 		93B997F226FA24D100082181 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B997E026FA24D100082181 /* Utils.swift */; };
 		93B997F326FA24D100082181 /* Prefix-Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B997E126FA24D100082181 /* Prefix-Header.swift */; };
-		93B997F526FA24D100082181 /* GoogleSans-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93B997E426FA24D100082181 /* GoogleSans-BoldItalic.otf */; };
-		93B997F626FA24D100082181 /* GoogleSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93B997E526FA24D100082181 /* GoogleSans-Regular.otf */; };
-		93B997F726FA24D100082181 /* GoogleSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93B997E626FA24D100082181 /* GoogleSans-Bold.otf */; };
-		93B997F826FA24D100082181 /* GoogleSans-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93B997E726FA24D100082181 /* GoogleSans-Italic.otf */; };
-		93B997F926FA24D100082181 /* GoogleSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93B997E826FA24D100082181 /* GoogleSans-Medium.otf */; };
-		93B997FA26FA24D100082181 /* GoogleSans-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93B997E926FA24D100082181 /* GoogleSans-MediumItalic.otf */; };
 		93B997FD26FA260900082181 /* SettingDefaultFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B997FC26FA260900082181 /* SettingDefaultFont.swift */; };
 		93B9980026FA28B300082181 /* CustomTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B997FF26FA28B300082181 /* CustomTabbar.swift */; };
 		9690731B9E0F97951489FFCF /* Pods_CameraMakeUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF56319144C9508A02EFB5E /* Pods_CameraMakeUp.framework */; };
@@ -139,6 +136,10 @@
 /* Begin PBXFileReference section */
 		3AF56319144C9508A02EFB5E /* Pods_CameraMakeUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CameraMakeUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4385463B0316E37E052F591E /* Pods-CameraMakeUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraMakeUp.debug.xcconfig"; path = "Target Support Files/Pods-CameraMakeUp/Pods-CameraMakeUp.debug.xcconfig"; sourceTree = "<group>"; };
+		93A4D52026FB623A006D4390 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		93A4D52126FB623A006D4390 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		93A4D52426FB650E006D4390 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		93A4D52726FB6CB5006D4390 /* GetHeightSafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHeightSafeArea.swift; sourceTree = "<group>"; };
 		93B996B826FA1E4E00082181 /* CameraMakeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraMakeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B996BB26FA1E4E00082181 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93B996BD26FA1E4E00082181 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -199,7 +200,6 @@
 		93B9974326FA22F200082181 /* URL+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		93B9974426FA22F200082181 /* UITextField_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField_Extension.swift; sourceTree = "<group>"; };
 		93B9974526FA22F200082181 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		93B9974626FA22F200082181 /* StringSwiftMenu+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StringSwiftMenu+Extension.swift"; sourceTree = "<group>"; };
 		93B9974726FA22F200082181 /* PropertyWapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyWapper.swift; sourceTree = "<group>"; };
 		93B9974826FA22F200082181 /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		93B9974926FA22F200082181 /* UIAllertVC+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAllertVC+Extension.swift"; sourceTree = "<group>"; };
@@ -259,12 +259,6 @@
 		93B997DF26FA24D100082181 /* BaseTabarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabarViewController.swift; sourceTree = "<group>"; };
 		93B997E026FA24D100082181 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		93B997E126FA24D100082181 /* Prefix-Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Prefix-Header.swift"; sourceTree = "<group>"; };
-		93B997E426FA24D100082181 /* GoogleSans-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GoogleSans-BoldItalic.otf"; sourceTree = "<group>"; };
-		93B997E526FA24D100082181 /* GoogleSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GoogleSans-Regular.otf"; sourceTree = "<group>"; };
-		93B997E626FA24D100082181 /* GoogleSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GoogleSans-Bold.otf"; sourceTree = "<group>"; };
-		93B997E726FA24D100082181 /* GoogleSans-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GoogleSans-Italic.otf"; sourceTree = "<group>"; };
-		93B997E826FA24D100082181 /* GoogleSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GoogleSans-Medium.otf"; sourceTree = "<group>"; };
-		93B997E926FA24D100082181 /* GoogleSans-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GoogleSans-MediumItalic.otf"; sourceTree = "<group>"; };
 		93B997FC26FA260900082181 /* SettingDefaultFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingDefaultFont.swift; sourceTree = "<group>"; };
 		93B997FF26FA28B300082181 /* CustomTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbar.swift; sourceTree = "<group>"; };
 		BBB4C85745D043C675F0573C /* Pods-CameraMakeUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraMakeUp.release.xcconfig"; path = "Target Support Files/Pods-CameraMakeUp/Pods-CameraMakeUp.release.xcconfig"; sourceTree = "<group>"; };
@@ -282,6 +276,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93A4D51F26FB6226006D4390 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				93A4D52026FB623A006D4390 /* HomeVC.swift */,
+				93A4D52126FB623A006D4390 /* HomeVC.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		93A4D52626FB664F006D4390 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				93A4D52426FB650E006D4390 /* Constant.swift */,
+				93A4D52726FB6CB5006D4390 /* GetHeightSafeArea.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		93B996AF26FA1E4E00082181 = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +321,7 @@
 				93B997D726FA24D100082181 /* BaseCommonView */,
 				93B996D226FA1FD200082181 /* SwiftGen */,
 				93B9973326FA22F200082181 /* Library */,
+				93A4D52626FB664F006D4390 /* Constant */,
 				93B997FB26FA25F300082181 /* Manage */,
 				93B996E426FA22DE00082181 /* Views */,
 				93B996DA26FA22D100082181 /* Common */,
@@ -520,7 +533,6 @@
 				93B9974326FA22F200082181 /* URL+Extension.swift */,
 				93B9974426FA22F200082181 /* UITextField_Extension.swift */,
 				93B9974526FA22F200082181 /* String+Extension.swift */,
-				93B9974626FA22F200082181 /* StringSwiftMenu+Extension.swift */,
 				93B9974726FA22F200082181 /* PropertyWapper.swift */,
 				93B9974826FA22F200082181 /* ViewExtension.swift */,
 				93B9974926FA22F200082181 /* UIAllertVC+Extension.swift */,
@@ -617,22 +629,8 @@
 				93B997DF26FA24D100082181 /* BaseTabarViewController.swift */,
 				93B997E026FA24D100082181 /* Utils.swift */,
 				93B997E126FA24D100082181 /* Prefix-Header.swift */,
-				93B997E326FA24D100082181 /* fonts */,
 			);
 			path = BaseCommonView;
-			sourceTree = "<group>";
-		};
-		93B997E326FA24D100082181 /* fonts */ = {
-			isa = PBXGroup;
-			children = (
-				93B997E426FA24D100082181 /* GoogleSans-BoldItalic.otf */,
-				93B997E526FA24D100082181 /* GoogleSans-Regular.otf */,
-				93B997E626FA24D100082181 /* GoogleSans-Bold.otf */,
-				93B997E726FA24D100082181 /* GoogleSans-Italic.otf */,
-				93B997E826FA24D100082181 /* GoogleSans-Medium.otf */,
-				93B997E926FA24D100082181 /* GoogleSans-MediumItalic.otf */,
-			);
-			path = fonts;
 			sourceTree = "<group>";
 		};
 		93B997FB26FA25F300082181 /* Manage */ = {
@@ -654,6 +652,7 @@
 		93B9980126FA28DE00082181 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				93A4D51F26FB6226006D4390 /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -736,18 +735,13 @@
 			files = (
 				93B9971D26FA22DF00082181 /* ImportOptionsVC.xib in Resources */,
 				93B9973026FA22DF00082181 /* ExportFile.xib in Resources */,
-				93B997F926FA24D100082181 /* GoogleSans-Medium.otf in Resources */,
 				93B9971726FA22DF00082181 /* StartIndicator.png in Resources */,
 				93B996D526FA206100082181 /* Localizable.strings in Resources */,
+				93A4D52326FB623A006D4390 /* HomeVC.xib in Resources */,
 				93B9972B26FA22DF00082181 /* EmptyView.xib in Resources */,
-				93B997F726FA24D100082181 /* GoogleSans-Bold.otf in Resources */,
-				93B997F526FA24D100082181 /* GoogleSans-BoldItalic.otf in Resources */,
 				93B996C826FA1E4F00082181 /* LaunchScreen.storyboard in Resources */,
 				93B9971926FA22DF00082181 /* ProgressIndicator.png in Resources */,
-				93B997F626FA24D100082181 /* GoogleSans-Regular.otf in Resources */,
-				93B997F826FA24D100082181 /* GoogleSans-Italic.otf in Resources */,
 				93B9971A26FA22DF00082181 /* LICENSE in Resources */,
-				93B997FA26FA24D100082181 /* GoogleSans-MediumItalic.otf in Resources */,
 				93B9971B26FA22DF00082181 /* README.md in Resources */,
 				93B996C526FA1E4F00082181 /* Assets.xcassets in Resources */,
 				93B9971626FA22DF00082181 /* BorderLine.png in Resources */,
@@ -835,6 +829,7 @@
 				93B9976226FA22F300082181 /* Drive+Extension.swift in Sources */,
 				93B996D826FA229D00082181 /* Assets-Gen.swift in Sources */,
 				93B9976526FA22F300082181 /* String+Extension.swift in Sources */,
+				93A4D52526FB650E006D4390 /* Constant.swift in Sources */,
 				93B997BC26FA233C00082181 /* UIImage+Extensions.swift in Sources */,
 				93B996BC26FA1E4E00082181 /* AppDelegate.swift in Sources */,
 				93B9975F26FA22F300082181 /* UIColor+Extensions.swift in Sources */,
@@ -892,13 +887,13 @@
 				93B997B526FA233C00082181 /* UIEdgeInsetsExtensions.swift in Sources */,
 				93B9972326FA22DF00082181 /* ABProgressIndicator.swift in Sources */,
 				93B997B426FA233C00082181 /* UITableViewExtensions.swift in Sources */,
-				93B9976626FA22F300082181 /* StringSwiftMenu+Extension.swift in Sources */,
 				93B9972026FA22DF00082181 /* CircularSliderHelper.swift in Sources */,
 				93B997F326FA24D100082181 /* Prefix-Header.swift in Sources */,
 				93B9975C26FA22F300082181 /* ViewControllerExtension.swift in Sources */,
 				93B997C426FA233C00082181 /* UIActivityExtensions.swift in Sources */,
 				93B997B826FA233C00082181 /* UINavigationItemExtensions.swift in Sources */,
 				93B997F026FA24D100082181 /* HelperAlert.swift in Sources */,
+				93A4D52826FB6CB5006D4390 /* GetHeightSafeArea.swift in Sources */,
 				93B9975B26FA22F300082181 /* NumberExtension.swift in Sources */,
 				93B9971F26FA22DF00082181 /* CustomSlider.swift in Sources */,
 				93B997CD26FA233C00082181 /* UILabelExtensions.swift in Sources */,
@@ -910,6 +905,7 @@
 				93B9972626FA22DF00082181 /* ABStartIndicator.swift in Sources */,
 				93B9975426FA22F300082181 /* UIApplication+Extension.swift in Sources */,
 				93B997B726FA233C00082181 /* UILayoutPriorityExtensions.swift in Sources */,
+				93A4D52226FB623A006D4390 /* HomeVC.swift in Sources */,
 				93B997D126FA233C00082181 /* UIImageViewExtensions.swift in Sources */,
 				93B9972F26FA22DF00082181 /* ExportFile.swift in Sources */,
 			);

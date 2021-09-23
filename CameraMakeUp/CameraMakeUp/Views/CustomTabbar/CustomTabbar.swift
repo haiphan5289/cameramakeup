@@ -10,7 +10,6 @@ import UIKit
 
 @IBDesignable
 class CustomTabbar: UITabBar {
-
     private var shapeLayer: CALayer?
 
     override func draw(_ rect: CGRect) {
@@ -37,15 +36,21 @@ class CustomTabbar: UITabBar {
     }
 
     func createPath() -> CGPath {
-        let height: CGFloat = 86.0
+        let radius: CGFloat = self.frame.height
         let path = UIBezierPath()
         let centerWidth = self.frame.width / 2
         path.move(to: CGPoint(x: 0, y: 0))
-        path.addLine(to: CGPoint(x: (centerWidth - height ), y: 0))
-        path.addCurve(to: CGPoint(x: centerWidth, y: height - 40),
-                      controlPoint1: CGPoint(x: (centerWidth - 30), y: 0), controlPoint2: CGPoint(x: centerWidth - 35, y: height - 40))
-        path.addCurve(to: CGPoint(x: (centerWidth + height ), y: 0),
-                      controlPoint1: CGPoint(x: centerWidth + 35, y: height - 40), controlPoint2: CGPoint(x: (centerWidth + 30), y: 0))
+        path.addLine(to: CGPoint(x: centerWidth - radius, y: 0))
+//        path.addCurve(to: CGPoint(x: centerWidth, y: height - 40),
+//                      controlPoint1: CGPoint(x: (centerWidth - 30), y: 0), controlPoint2: CGPoint(x: centerWidth - 35, y: height - 40))
+//        path.addCurve(to: CGPoint(x: (centerWidth + height ), y: 0),
+//                      controlPoint1: CGPoint(x: centerWidth + 35, y: height - 40), controlPoint2: CGPoint(x: (centerWidth + 30), y: 0))
+//        path.addQuadCurve(to: CGPoint(x: centerWidth, y: height - 40), controlPoint: CGPoint(x: (centerWidth - 30), y: 0))
+//        path.addQuadCurve(to: CGPoint(x: (centerWidth + height ), y: 0), controlPoint:CGPoint(x: centerWidth + 35, y: height - 40))
+        
+        //
+        path.addArc(withCenter: CGPoint(x: centerWidth, y: 0), radius: radius, startAngle: .pi , endAngle: 0 , clockwise: false)
+//        path.addLine(to: CGPoint(x: centerWidth + 20, y: 0))
         path.addLine(to: CGPoint(x: self.frame.width, y: 0))
         path.addLine(to: CGPoint(x: self.frame.width, y: self.frame.height))
         path.addLine(to: CGPoint(x: 0, y: self.frame.height))

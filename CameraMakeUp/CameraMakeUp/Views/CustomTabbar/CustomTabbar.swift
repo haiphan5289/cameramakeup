@@ -36,32 +36,27 @@ class CustomTabbar: UITabBar {
     }
 
     func createPath() -> CGPath {
-        let padding: CGFloat = 5.0
-        let centerButtonHeight: CGFloat = 50
-        let marginToDraw = 20
-
-        let f = CGFloat(centerButtonHeight / 2.0) + padding
-        let h = frame.height
-        let w = frame.width
-        let halfW = frame.width / 2
-        let r = self.frame.height - CGFloat(marginToDraw)
+        let bigRadius: CGFloat = self.frame.height - 10
         let path = UIBezierPath()
-        path.move(to: .zero)
-
-
-        path.addLine(to: CGPoint(x: halfW-f-(r/2.0), y: 0))
-
-        path.addQuadCurve(to: CGPoint(x: halfW-f, y: (r/2.0)), controlPoint: CGPoint(x: halfW-f, y: 0))
-
-        path.addArc(withCenter: CGPoint(x: halfW, y: (r/2.0)), radius: f, startAngle: .pi, endAngle: 0, clockwise: false)
-
-        path.addQuadCurve(to: CGPoint(x: halfW+f+(r/2.0), y: 0), controlPoint: CGPoint(x: halfW+f, y: 0))
-
-        path.addLine(to: CGPoint(x: w, y: 0))
-        path.addLine(to: CGPoint(x: w, y: h))
-        path.addLine(to: CGPoint(x: 0.0, y: h))
+        let centerWidth = self.frame.width / 2
+        path.move(to: CGPoint(x: 0, y: 0))
+        let radius: CGFloat = 10 //change it if you want
+        let leftArcOriginX = centerWidth - bigRadius - radius
+        let leftArcOriginY: CGFloat = 0
+        path.addLine(to: CGPoint(x: leftArcOriginX, y: leftArcOriginY))
+        // add left little arc, change angle if you want, if you dont want oval, may be you can use path.addCurve(to: , controlPoint1: , controlPoint2: )
+        path.addArc(withCenter: CGPoint(x: leftArcOriginX, y: leftArcOriginY + radius), radius: radius, startAngle: CGFloat(270.0 * Double.pi/180.0), endAngle: 0, clockwise: true)
+        // add big arc
+        path.addArc(withCenter: CGPoint(x: centerWidth, y: radius), radius: bigRadius, startAngle: CGFloat(180.0 * Double.pi/180.0), endAngle: CGFloat(0 * Double.pi/180.0), clockwise: false)
+        // add right litte arc
+        path.addArc(withCenter: CGPoint(x: centerWidth + bigRadius + radius, y: radius), radius: radius, startAngle: CGFloat(180.0 * Double.pi/180.0), endAngle: CGFloat(270.0 * Double.pi/180.0), clockwise: true)
+        path.addLine(to: CGPoint(x: self.frame.width, y: 0))
+        path.addLine(to: CGPoint(x: self.frame.width, y: self.frame.height))
+        path.addLine(to: CGPoint(x: 0, y: self.frame.height))
+        path.lineCapStyle = .round
+//        UIColor.red.setStroke()
+//        path.stroke()
         path.close()
-
         return path.cgPath
     }
 

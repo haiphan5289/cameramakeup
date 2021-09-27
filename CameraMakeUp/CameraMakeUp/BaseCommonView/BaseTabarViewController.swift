@@ -11,31 +11,6 @@ import RxCocoa
 import RxSwift
 import SnapKit
 
-enum TypeTabbar: Int, CaseIterable {
-    case home
-//    case audio
-//    case video
-    
-//    var image: UIImage? {
-//        switch self {
-//        case .home:
-//            return Asset.homeActive.image
-//        case .audio:
-//            return Asset.icAudioHome.image
-//        case .video:
-//            return Asset.icVideoHome.image
-//        }
-//    }
-//
-    var text: String {
-        switch self {
-        case .home:
-            return L10n.Tabbar.home
-        }
-    }
-    
-}
-
 class BaseTabbarViewController: UITabBarController {
     
     var customTabbar: CustomTabbar!
@@ -47,6 +22,7 @@ class BaseTabbarViewController: UITabBarController {
         // Do any additional setup after loading the view.
         self.setupVar()
         self.setupUI()
+        self.loadTabBar()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -54,27 +30,17 @@ class BaseTabbarViewController: UITabBarController {
     }
     
     func setupVar() {
-        setupTabbar()
+//        setupTabbar()
         
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
-        var bottomSafeArea: CGFloat = 5
-
-        if #available(iOS 11.0, *) {
-            if view.safeAreaInsets.bottom > 0 {
-                bottomSafeArea = 10
-            }
-
-        }
-
-        let height: CGFloat = tabBar.frame.height + bottomSafeArea
-        var tabFrame            = tabBar.frame
-        tabFrame.size.height    = height
-        tabFrame.origin.y       = view.frame.size.height - height
-        self.customTabbar.frame            = tabFrame
+//        let height: CGFloat = tabBar.frame.height + Constant.shared.getHeightSafeArea(type: .bottom)
+//        var tabFrame            = tabBar.frame
+//        tabFrame.size.height    = height
+//        tabFrame.origin.y       = view.frame.size.height - height
+//        self.customTabbar.frame            = tabFrame
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
@@ -105,15 +71,73 @@ class BaseTabbarViewController: UITabBarController {
         self.view.addSubview(self.customTabbar)
     }
     
-    func setupTabbar() {
-        let homeVC = HomeVC.createVC()
-        self.viewControllers = [homeVC]
+//    func setupTabbar() {
+//        let homeVC = HomeVC.createVC()
+//        self.viewControllers = [homeVC]
+//
+//        TypeTabbar.allCases.forEach { (type) in
+//            if let vc = self.viewControllers?[type.rawValue] {
+//                vc.tabBarItem.title = type.text
+//            }
+//        }
+//    }
+    
+    func loadTabBar() {
+        // Tạo và load custom tab bar
+        let tabbarItems: [CustomTabbar.TabItem] = [.home, .video]
         
-        TypeTabbar.allCases.forEach { (type) in
-            if let vc = self.viewControllers?[type.rawValue] {
-                vc.tabBarItem.title = type.text
+        setupCustomTabMenu(tabbarItems, completion: { viewControllers in
+            self.viewControllers = viewControllers
+        })
+        
+        selectedIndex = 0
+    }
+
+    func setupCustomTabMenu(_ menuItems: [CustomTabbar.TabItem], completion: @escaping ([UIViewController]) -> Void) {
+        // Handle custom tab bar và các attach touch event listener
+        let frame = tabBar.frame
+        var controllers = [UIViewController]()
+        
+        // Thêm các view controller tương ứng
+        menuItems.forEach({
+            controllers.append($0.viewController)
+            
+            // Khởi tạo custom tab bar
+            let customTabbar = CustomTabbarView(menuItems: menuItems, frame: frame)
+            customTabbar.backgroundColor = .red
+            customTabbar.clipsToBounds = true
+            customTabbar.itemTapped = changeTab(tab:)
+            self.customTabbar.addSubview(customTabbar)
+            
+            switch $0 {
+            case .home:
+                // Auto layout cho custom tab bar
+                customTabbar.snp.makeConstraints { make in
+                    make.left.top.equalToSuperview()
+                    make.height.equalTo(self.customTabbar.frame.height)
+                    make.width.equalTo(self.getWidthView())
+                }
+            case .video:
+                // Auto layout cho custom tab bar
+                customTabbar.snp.makeConstraints { make in
+                    make.right.top.equalToSuperview()
+                    make.height.equalTo(self.customTabbar.frame.height)
+                    make.width.equalTo(self.getWidthView())
+                }
             }
-        }
+            
+        })
+        
+        completion(controllers)
+    }
+
+    func changeTab(tab: Int) {
+        self.selectedIndex = tab
+    }
+    
+    private func getWidthView() -> CGFloat {
+        let w = ((self.view.frame.width / 2) - Constant.shared.bigRadiusTabbar) / 2
+        return w
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {

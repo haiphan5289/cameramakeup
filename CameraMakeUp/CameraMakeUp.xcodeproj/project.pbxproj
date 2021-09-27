@@ -130,6 +130,7 @@
 		93B997F326FA24D100082181 /* Prefix-Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B997E126FA24D100082181 /* Prefix-Header.swift */; };
 		93B997FD26FA260900082181 /* SettingDefaultFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B997FC26FA260900082181 /* SettingDefaultFont.swift */; };
 		93B9980026FA28B300082181 /* CustomTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B997FF26FA28B300082181 /* CustomTabbar.swift */; };
+		93CB19CF2702076800672D02 /* CustomTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CB19CE2702076800672D02 /* CustomTabbarView.swift */; };
 		9690731B9E0F97951489FFCF /* Pods_CameraMakeUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF56319144C9508A02EFB5E /* Pods_CameraMakeUp.framework */; };
 /* End PBXBuildFile section */
 
@@ -261,6 +262,7 @@
 		93B997E126FA24D100082181 /* Prefix-Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Prefix-Header.swift"; sourceTree = "<group>"; };
 		93B997FC26FA260900082181 /* SettingDefaultFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingDefaultFont.swift; sourceTree = "<group>"; };
 		93B997FF26FA28B300082181 /* CustomTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbar.swift; sourceTree = "<group>"; };
+		93CB19CE2702076800672D02 /* CustomTabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarView.swift; sourceTree = "<group>"; };
 		BBB4C85745D043C675F0573C /* Pods-CameraMakeUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraMakeUp.release.xcconfig"; path = "Target Support Files/Pods-CameraMakeUp/Pods-CameraMakeUp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -645,6 +647,7 @@
 			isa = PBXGroup;
 			children = (
 				93B997FF26FA28B300082181 /* CustomTabbar.swift */,
+				93CB19CE2702076800672D02 /* CustomTabbarView.swift */,
 			);
 			path = CustomTabbar;
 			sourceTree = "<group>";
@@ -888,6 +891,7 @@
 				93B9972326FA22DF00082181 /* ABProgressIndicator.swift in Sources */,
 				93B997B426FA233C00082181 /* UITableViewExtensions.swift in Sources */,
 				93B9972026FA22DF00082181 /* CircularSliderHelper.swift in Sources */,
+				93CB19CF2702076800672D02 /* CustomTabbarView.swift in Sources */,
 				93B997F326FA24D100082181 /* Prefix-Header.swift in Sources */,
 				93B9975C26FA22F300082181 /* ViewControllerExtension.swift in Sources */,
 				93B997C426FA233C00082181 /* UIActivityExtensions.swift in Sources */,

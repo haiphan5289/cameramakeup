@@ -10,6 +10,25 @@ import UIKit
 
 @IBDesignable
 class CustomTabbar: UITabBar {
+    
+    enum TabItem: Int, CaseIterable {
+        case home
+        case video
+
+        var viewController: UIViewController {
+            switch self {
+            case .home:
+                return HomeVC.createVC()
+            case .video:
+                return HomeVC.createVC()
+            }
+        }
+        
+        var displayTitle: String {
+            return "Home"
+        }
+    }
+    
     private var shapeLayer: CALayer?
 
     override func draw(_ rect: CGRect) {
@@ -36,7 +55,7 @@ class CustomTabbar: UITabBar {
     }
 
     func createPath() -> CGPath {
-        let bigRadius: CGFloat = self.frame.height - 10
+        let bigRadius: CGFloat = Constant.shared.bigRadiusTabbar
         let path = UIBezierPath()
         let centerWidth = self.frame.width / 2
         path.move(to: CGPoint(x: 0, y: 0))

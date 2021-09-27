@@ -10,6 +10,7 @@ import UIKit
 
 final class Constant {
     static var shared = Constant()
+    let bigRadiusTabbar: CGFloat = 30
     
     private init() {}
 

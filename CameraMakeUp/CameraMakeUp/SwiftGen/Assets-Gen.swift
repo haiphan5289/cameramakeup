@@ -22,8 +22,12 @@ internal typealias AssetImageTypeAlias = ImageAsset.Image
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
   internal static let accentColor = ColorAsset(name: "AccentColor")
-  internal static let app = ColorAsset(name: "App")
+  internal static let appBg = ColorAsset(name: "AppBg")
+  internal static let colorApp = ColorAsset(name: "ColorApp")
+  internal static let disableHome = ColorAsset(name: "DisableHome")
   internal static let icCamera = ImageAsset(name: "ic_camera")
+  internal static let icGallery = ImageAsset(name: "ic_gallery")
+  internal static let icVideo = ImageAsset(name: "ic_video")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
@@ -74,8 +78,7 @@ internal struct ImageAsset {
     #if os(iOS) || os(tvOS)
     let image = Image(named: name, in: bundle, compatibleWith: nil)
     #elseif os(macOS)
-    let name = NSImage.Name(self.name)
-    let image = (bundle == .main) ? NSImage(named: name) : bundle.image(forResource: name)
+    let image = bundle.image(forResource: NSImage.Name(name))
     #elseif os(watchOS)
     let image = Image(named: name)
     #endif
@@ -104,11 +107,7 @@ internal extension ImageAsset.Image {
 // swiftlint:disable convenience_type
 private final class BundleToken {
   static let bundle: Bundle = {
-    #if SWIFT_PACKAGE
-    return Bundle.module
-    #else
-    return Bundle(for: BundleToken.self)
-    #endif
+    Bundle(for: BundleToken.self)
   }()
 }
 // swiftlint:enable convenience_type

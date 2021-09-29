@@ -8,16 +8,20 @@ import Foundation
 // MARK: - Strings
 
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
-// swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
+// swiftlint:disable nesting type_body_length type_name
 internal enum L10n {
 
   internal enum Tabbar {
     /// Home
     internal static let home = L10n.tr("Localizable", "Tabbar.Home")
+    /// Photos
+    internal static let photos = L10n.tr("Localizable", "Tabbar.Photos")
+    /// Video
+    internal static let video = L10n.tr("Localizable", "Tabbar.Video")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
-// swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
+// swiftlint:enable nesting type_body_length type_name
 
 // MARK: - Implementation Details
 
@@ -31,11 +35,7 @@ extension L10n {
 // swiftlint:disable convenience_type
 private final class BundleToken {
   static let bundle: Bundle = {
-    #if SWIFT_PACKAGE
-    return Bundle.module
-    #else
-    return Bundle(for: BundleToken.self)
-    #endif
+    Bundle(for: BundleToken.self)
   }()
 }
 // swiftlint:enable convenience_type

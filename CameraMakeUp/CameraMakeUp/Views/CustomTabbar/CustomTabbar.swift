@@ -12,20 +12,34 @@ import UIKit
 class CustomTabbar: UITabBar {
     
     enum TabItem: Int, CaseIterable {
-        case home
+        case photos
         case video
 
         var viewController: UIViewController {
             switch self {
-            case .home:
+            case .photos:
                 return HomeVC.createVC()
             case .video:
                 return HomeVC.createVC()
             }
         }
         
-        var displayTitle: String {
-            return "Home"
+        var text: String {
+            switch self {
+            case .photos:
+                return L10n.Tabbar.photos
+            case .video:
+                return L10n.Tabbar.video
+            }
+        }
+        
+        var img: UIImage {
+            switch self {
+            case .photos:
+                return Asset.icGallery.image
+            case .video:
+                return Asset.icVideo.image
+            }
         }
     }
     
@@ -39,7 +53,7 @@ class CustomTabbar: UITabBar {
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = createPath()
         shapeLayer.strokeColor = UIColor.lightGray.cgColor
-        shapeLayer.fillColor = #colorLiteral(red: 0.9782002568, green: 0.9782230258, blue: 0.9782107472, alpha: 1)
+        shapeLayer.fillColor = Asset.appBg.color.cgColor
         shapeLayer.lineWidth = 0.5
         shapeLayer.shadowOffset = CGSize(width:0, height:0)
         shapeLayer.shadowRadius = 10

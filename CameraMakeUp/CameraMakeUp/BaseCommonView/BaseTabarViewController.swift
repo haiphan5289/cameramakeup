@@ -69,6 +69,7 @@ class BaseTabbarViewController: UITabBarController {
         self.tabBar.isHidden = true
         self.customTabbar = CustomTabbar(frame: frame)
         self.view.addSubview(self.customTabbar)
+        self.customTabbar.backgroundColor = .clear
     }
     
 //    func setupTabbar() {
@@ -84,7 +85,7 @@ class BaseTabbarViewController: UITabBarController {
     
     func loadTabBar() {
         // Tạo và load custom tab bar
-        let tabbarItems: [CustomTabbar.TabItem] = [.home, .video]
+        let tabbarItems: [CustomTabbar.TabItem] = [.photos, .video]
         
         setupCustomTabMenu(tabbarItems, completion: { viewControllers in
             self.viewControllers = viewControllers
@@ -103,14 +104,15 @@ class BaseTabbarViewController: UITabBarController {
             controllers.append($0.viewController)
             
             // Khởi tạo custom tab bar
-            let customTabbar = CustomTabbarView(menuItems: menuItems, frame: frame)
-            customTabbar.backgroundColor = .red
+            let customTabbar = CustomTabbarView(menuItem: $0, frame: frame)
+            customTabbar.backgroundColor = Asset.appBg.color
+            customTabbar.tag = $0.rawValue
             customTabbar.clipsToBounds = true
             customTabbar.itemTapped = changeTab(tab:)
             self.customTabbar.addSubview(customTabbar)
             
             switch $0 {
-            case .home:
+            case .photos:
                 // Auto layout cho custom tab bar
                 customTabbar.snp.makeConstraints { make in
                     make.left.top.equalToSuperview()
@@ -125,7 +127,10 @@ class BaseTabbarViewController: UITabBarController {
                     make.width.equalTo(self.getWidthView())
                 }
             }
-            
+            customTabbar.itemTapped = { [weak self] index in
+                guard let wSelf = self else { return }
+                wSelf.changeTab(tab: index)
+            }
         })
         
         completion(controllers)
@@ -133,10 +138,20 @@ class BaseTabbarViewController: UITabBarController {
 
     func changeTab(tab: Int) {
         self.selectedIndex = tab
+        self.customTabbar.subviews.forEach { v in
+            if let v = v as? CustomTabbarView {
+                if v.tag == tab {
+                    v.activateTab()
+                } else {
+                    v.deactivateTab()
+                }
+            }
+        }
     }
     
     private func getWidthView() -> CGFloat {
-        let w = ((self.view.frame.width / 2) - Constant.shared.bigRadiusTabbar) / 2
+        let countHaftCustomTabbar: CGFloat = CGFloat((CustomTabbar.TabItem.allCases.count / 2))
+        let w = ((self.view.frame.width / 2) - Constant.shared.bigRadiusTabbar) / countHaftCustomTabbar
         return w
     }
     
